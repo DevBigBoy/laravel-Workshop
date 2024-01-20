@@ -21,26 +21,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('profile', function () {
-//     return view('profile');
-// });
+Route::post('user', function () {
+    return 'hello';
+});
 
+Route::put('post', function () {
+    return 'hello PUT Method';
+});
 
-// Route::group(['prefix' => 'admin'], function () {
-//     Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
-//     Route::get('/cart', [CartController::class, 'greeting'])->name('cart');
-//     Route::get('/order', [CartController::class, 'greeting'])->name('order');
-//     Route::get('/user', [CartController::class, 'greeting'])->name('user');
-// });
+Route::patch('slider', function () {
+    return 'hello patch Method';
+});
 
-# parent
-Route::group(['prefix' => 'dashboard'], function () {
-    # Child
-    Route::group(['prefix' => 'admin'], function () {
-        Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
-        Route::get('/cart', [CartController::class, 'greeting'])->name('cart');
-        Route::get('/order', [CartController::class, 'greeting'])->name('order');
-        Route::get('/user', [CartController::class, 'greeting'])->name('user');
-        Route::get('users', [UsersController::class, 'show'])->name('users');
-    });
+Route::delete('order', function () {
+    return 'hello delete Method';
+});
+
+Route::any('order', function () {
+    return 'hello any Method';
 });
