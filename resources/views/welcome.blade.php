@@ -54,13 +54,26 @@
         {{--  --}}
         <div class="card mt-5">
             <div class="card-header">
-                pathch Method
+                delete Method
             </div>
             <div class="card-body">
                 <form method="post" action="/order">
                     @csrf
                     @method('delete')
                     <input type="submit" value="delete method" class="btn btn-primary mt-3">
+                </form>
+            </div>
+        </div>
+        {{--  --}}
+        <div class="card mt-5">
+            <div class="card-header">
+                options Method
+            </div>
+            <div class="card-body">
+                <form method="post" action="/product">
+                    @csrf
+                    @method('options')
+                    <input type="submit" value="options method" class="btn btn-primary mt-3">
                 </form>
             </div>
         </div>
