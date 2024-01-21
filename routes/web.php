@@ -75,6 +75,22 @@ Route::get('/', function () {
 //     return 'user\'s name is ' . $name;
 // })->whereAlphaNumeric('name');
 
-Route::get('item/edit/{id}', function ($id = null) {
-    return 'Edit Record Id = ' . $id;
+// Route::get('item/edit/{id}', function ($id = null) {
+//     return 'Edit Record Id = ' . $id;
+// });
+
+
+Route::prefix('products')->group(function () {
+    Route::get('/show', fn () => 'Show Product');
+    Route::get('/create', fn () => 'Create Product');
+    Route::get('/delete', fn () => 'Delete Product');
 });
+
+
+// Route::group(['prefix' => 'products'], function () {
+//     Route::get('/show', fn () => 'Show Product');
+//     Route::get('/create', fn () => 'Create Product');
+//     Route::get('/delete', fn () => 'Delete Product');
+// });
+
+// Route::fallback(fn () => redirect('/'));

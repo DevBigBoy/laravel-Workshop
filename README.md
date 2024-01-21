@@ -6,7 +6,7 @@
 
 ### Author Links
 
-👋 Hello, I'm mo shalzy.
+👋 Hello, I'm mo shazly.
 
 🚀 Follow Me:
 
