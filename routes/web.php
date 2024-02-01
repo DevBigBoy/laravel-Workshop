@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\Auth\ProfileController;
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\Group;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Auth\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,11 @@ use PHPUnit\Framework\Attributes\Group;
 Route::get('/', function () {
     return view('home');
 });
+
+
+Route::get('/my/data', fn () => view('my_data'));
+Route::post('/receive/data/{id}', fn () => 'Done')->name('receive');
+
 
 // Route::post('user', function () {
 //     return 'hello';
