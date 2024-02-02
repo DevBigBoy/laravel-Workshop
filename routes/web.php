@@ -7,6 +7,11 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\ExampleController;
 
+enum Category: string
+{
+    case Fruits = 'fruits';
+    case People = 'people';
+}
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +24,10 @@ use App\Http\Controllers\ExampleController;
 */
 
 Route::view('/', 'home');
+
+Route::get('/categories/{category}', function (Category $category) {
+    return $category->value;
+});
 
 // Route::get('mydata', [ExampleController::class, 'my_data']);
 // Route::post('receive', [ExampleController::class, 'receive'])->name('receive');
