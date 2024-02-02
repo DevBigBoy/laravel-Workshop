@@ -36,3 +36,9 @@
 -   🔗 [MDN Web Glossary: Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 -   🔗 [HTTP Verbs](https://medium.com/@irisxjiang/http-verbs-9f9e329be681)
 -   🔗 [Comprehensive Guide to Becoming a Laravel Developer](https://medium.com/@mitzijackson/mastering-laravel-a-comprehensive-guide-to-becoming-a-skilled-developer-99c76994de96)
+
+---
+
+### 📚 Artisan commands
+
+-   php artisan make:controller ExampleController

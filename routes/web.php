@@ -5,6 +5,7 @@ use PHPUnit\Framework\Attributes\Group;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\ExampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,24 @@ use App\Http\Controllers\Auth\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::view('/', 'home');
+
+// Route::get('mydata', [ExampleController::class, 'my_data']);
+// Route::post('receive', [ExampleController::class, 'receive'])->name('receive');
+
+// Route::controller(ExampleController::class)->group(function () {
+//     Route::get('mydata', 'my_data');
+//     Route::post('receive', 'receive')->name('receive');
+// });
 
 
-Route::get('/my/data', fn () => view('my_data'));
-Route::post('/receive/data/{id}', fn () => 'Done')->name('receive');
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+
+// Route::get('/my/data', fn () => view('my_data'));
+// Route::post('/receive/data/{id}', fn () => 'Done')->name('receive');
 
 
 // Route::post('user', function () {
@@ -85,11 +97,11 @@ Route::post('/receive/data/{id}', fn () => 'Done')->name('receive');
 // });
 
 
-Route::prefix('products')->group(function () {
-    Route::get('/show', fn () => 'Show Product');
-    Route::get('/create', fn () => 'Create Product');
-    Route::get('/delete', fn () => 'Delete Product');
-});
+// Route::prefix('products')->group(function () {
+//     Route::get('/show', fn () => 'Show Product');
+//     Route::get('/create', fn () => 'Create Product');
+//     Route::get('/delete', fn () => 'Delete Product');
+// });
 
 
 // Route::group(['prefix' => 'products'], function () {

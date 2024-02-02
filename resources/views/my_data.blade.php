@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="{{ route('receive', ['id' => 1231]) }}" method="post">
+    <form action="{{ route('receive') }}" method="post">
         @csrf
         <input type="submit" value="send data">
     </form>
