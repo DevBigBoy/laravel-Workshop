@@ -42,3 +42,5 @@
 ### 📚 Artisan commands
 
 -   php artisan make:controller ExampleController
+-   php artisan route:list
+-   php artisan make:middleware Test

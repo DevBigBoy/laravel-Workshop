@@ -23,11 +23,36 @@ enum Category: string
 |
 */
 
-Route::view('/', 'home');
+Route::view('/', 'home')->name('home');
 
-Route::get('/categories/{category}', function (Category $category) {
-    return $category->value;
+Route::group(['middleware' => 'test:2,2'], function () {
+    Route::get('posts', fn () => 'Posts');
 });
+
+
+// Route::middleware('guest')->group(function () {
+// });
+
+
+// Route::middleware('auth')->group(function () {
+// });
+
+
+// Route::group(['middleware' => 'guest', 'prefix' => 'admin'], function () {
+// });
+
+// Route::middleware('guest')->get('profile', function () {
+//     return 'Welcome To laravel x10';
+// });
+
+
+// Route::middleware('auth')->get('profile', function () {
+//     return 'Welcome To laravel x10';
+// });
+
+// Route::get('/categories/{category}', function (Category $category) {
+//     return $category->value;
+// });
 
 // Route::get('mydata', [ExampleController::class, 'my_data']);
 // Route::post('receive', [ExampleController::class, 'receive'])->name('receive');
