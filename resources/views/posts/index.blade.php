@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('content')
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">body</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse ($posts as $post)
+                <tr>
+                    <th scope="row">{{ $post->index }}</th>
+                </tr>
+            @empty
 
-<body>
-    <h2>Posts</h2>
-    <a href="{{ route('posts.create') }}">Create Post</a>
-</body>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+            @endforelse
 
-</html>
+        </tbody>
+    </table>
+@endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\PostContoller;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProductController;
 
@@ -25,9 +26,13 @@ enum Category: string
 |
 */
 
+Route::resource('posts', '');
+
 Route::view('/', 'home')->name('home');
 
 Route::resource('product', ProductController::class);
+
+Route::resource('posts', PostContoller::class);
 
 // Route::group(['middleware' => 'test:2,2'], function () {
 //     Route::get('posts', fn () => 'Posts');
